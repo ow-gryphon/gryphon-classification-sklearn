@@ -1,0 +1,24 @@
+name: update_index
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+*'
+    branches:
+      - master
+      - main
+
+jobs:
+  Send-file-to-index:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Update version on index
+      uses: ow-gryphon/update-grypi-action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      with:
+        repository_name: ${{ github.event.repository.name }}
+        user_email: 'daniel.uken@oliverwyman.com'
+        user_name: 'danukenOW'
