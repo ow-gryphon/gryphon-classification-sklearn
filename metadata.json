@@ -1,15 +1,14 @@
 {
-    "display_name": "",
-    "command": "",
-    "dependencies": [],
+    "display_name": "Classification using Sklearn (ML focus)",
+    "command": "generate",
+    "dependencies": ["numpy", "scikit-learn", "matplotlib", "seaborn", "mlxtend", "jupyter"],
 
-    "keywords": [],
-    "methodology": [],
+    "keywords": ["Classification", "Sklearn", "Scikit-Learn", "Logistic"],
+    "methodology": ["Classification"],
     "topic": [],
 
-    "description": "",
-    "author": "",
-    "author_email": "",
-	
-	"read_more_link": ""
+    "description": "Methodologies to support building a binary classification model using sklearn, including variable selection and hyperparameter tuning",
+    "author": "Daniel Wang",
+    "author_email": "daniel.wang@oliverwyman.com",
+    "read_more_link": "https://github.com/ow-gryphon/gryphon-classification-sklearn"
 }
